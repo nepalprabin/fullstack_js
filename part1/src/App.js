@@ -1,13 +1,14 @@
 import './App.css';
 
-function Profile(props) {
+function Profile({name, gradYear}) {
+  // const {name, gradYear} = props
   const workExperience = () => {
     const yearNow = new Date().getFullYear()
-    return yearNow - props.gradYear
+    return yearNow - gradYear
   }
   return (
     <div>
-    <p>{props.name} is the scientist from Britian. He has been working for {workExperience()} years</p>
+    <p>{name} is the scientist from Britian. He has been working for {workExperience()} years</p>
     </div>
   )
 }
